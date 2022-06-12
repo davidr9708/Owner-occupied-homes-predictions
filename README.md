@@ -1,16 +1,14 @@
 Predictive model for owner-occupied Boston’s homes
 ================
-2022-06-12
 
-=============================================================================================
-
+=========================================================================
 **Summary:** This project purpose is build a predictive model for
 ***corrected median value of owner-occupied Boston’s homes in USD
 1000’s*** (`cmedv`). Linear regressions, SVD, and neural networks where
 used to trained candidates models, the best of each one was compared to
 select the final predictive model.
 
-=============================================================================================
+=========================================================================
 
 ## 1. Model’s Purpose
 
