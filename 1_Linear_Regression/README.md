@@ -185,11 +185,11 @@ print(factor_variable)
 
 2.  `chas` has few observations in level 1, however, it will be kept
     because its ratio with level 0 is lower than 20.
-    ![](Housing_price_files/figure-gfm/factors-1.png)<!-- -->
+    ![](Figs/factors-1.png)<!-- -->
 
 #### 4.1.2 Numeric variables
 
-![](Housing_price_files/figure-gfm/distributions-1.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-2.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-3.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-4.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-5.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-6.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-7.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-8.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-9.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-10.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-11.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-12.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-13.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-14.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-15.png)<!-- -->![](Housing_price_files/figure-gfm/distributions-16.png)<!-- -->
+![](Figs/distributions-1.png)<!-- -->![](Figs/distributions-2.png)<!-- -->![](Figs/distributions-3.png)<!-- -->![](Figs/distributions-4.png)<!-- -->![](Figs/distributions-5.png)<!-- -->![](Figs/distributions-6.png)<!-- -->![](Figs/distributions-7.png)<!-- -->![](Figs/distributions-8.png)<!-- -->![](Figs/distributions-9.png)<!-- -->![](Figs/distributions-10.png)<!-- -->![](Figs/distributions-11.png)<!-- -->![](Figs/distributions-12.png)<!-- -->![](Figs/distributions-13.png)<!-- -->![](Figs/distributions-14.png)<!-- -->![](Figs/distributions-15.png)<!-- -->![](Figs/distributions-16.png)<!-- -->
 
 ## 4.2 Transformations
 
@@ -230,11 +230,11 @@ The main assumption for linear regressions is: there is a linear
 correlation between the predictor and the outcome, that’s why we need to
 know correlation’s values.
 
-![](Housing_price_files/figure-gfm/correlation-1.png)<!-- -->
+![](Figs/correlation-1.png)<!-- -->
 
 To verify these values, I visualized the data.
 
-![](Housing_price_files/figure-gfm/numeric_factor-1.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-2.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-3.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-4.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-5.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-6.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-7.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-8.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-9.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-10.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-11.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-12.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-13.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-14.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-15.png)<!-- -->![](Housing_price_files/figure-gfm/numeric_factor-16.png)<!-- -->
+![](Figs/numeric_factor-1.png)<!-- -->![](Figs/numeric_factor-2.png)<!-- -->![](Figs/numeric_factor-3.png)<!-- -->![](Figs/numeric_factor-4.png)<!-- -->![](Figs/numeric_factor-5.png)<!-- -->![](Figs/numeric_factor-6.png)<!-- -->![](Figs/numeric_factor-7.png)<!-- -->![](Figs/numeric_factor-8.png)<!-- -->![](Figs/numeric_factor-9.png)<!-- -->![](Figs/numeric_factor-10.png)<!-- -->![](Figs/numeric_factor-11.png)<!-- -->![](Figs/numeric_factor-12.png)<!-- -->![](Figs/numeric_factor-13.png)<!-- -->![](Figs/numeric_factor-14.png)<!-- -->![](Figs/numeric_factor-15.png)<!-- -->![](Figs/numeric_factor-16.png)<!-- -->
 
 Due to their correlations with the outcome, `rm` and `lstat` are the
 only ones to keep Additionally, `lstat` shows a curve graph, it would be
@@ -244,7 +244,7 @@ a good strategy to implement `lstat^2` into training models.
 
 Let’s compare the correlation between `chas` and the outcome.
 
-![](Housing_price_files/figure-gfm/outcome_factor-1.png)<!-- -->
+![](Figs/outcome_factor-1.png)<!-- -->
 
 It looks like depending on the level of `chas`, the value of `cmedv`
 might change, this predictor will be consider to build the model.
@@ -362,45 +362,45 @@ pls.model1_testing  <- predict(rlm.model_1, raw_data[-trainingRows, c(numeric_va
 plot(data_to_test_1$cmedv, lm.model1_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-1.png)<!-- -->
+![](Figs/models_plot-1.png)<!-- -->
 
 ``` r
 plot(data_to_test_2$cmedv, lm.model2_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-2.png)<!-- -->
+![](Figs/models_plot-2.png)<!-- -->
 
 ``` r
 plot(data_to_test_3$cmedv, lm.model3_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-3.png)<!-- -->
+![](Figs/models_plot-3.png)<!-- -->
 
 ``` r
 # rlm models
 plot(data_to_test_1$cmedv, rlm.model1_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-4.png)<!-- -->
+![](Figs/models_plot-4.png)<!-- -->
 
 ``` r
 plot(data_to_test_2$cmedv, rlm.model2_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-5.png)<!-- -->
+![](Figs/models_plot-5.png)<!-- -->
 
 ``` r
 plot(data_to_test_3$cmedv, rlm.model3_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-6.png)<!-- -->
+![](Figs/models_plot-6.png)<!-- -->
 
 ``` r
 # pls model
 plot(raw_data[-trainingRows, ]$cmedv, pls.model1_testing, col = 'blue')
 ```
 
-![](Housing_price_files/figure-gfm/models_plot-7.png)<!-- -->
+![](Figs/models_plot-7.png)<!-- -->
 
 Visually, all the models show the same correlation between the predicted
 and observed values.
@@ -502,7 +502,7 @@ selection of the variable was well done for the non pls models. So,
 following the *parsimonious* principle, we might choose `lm.model_1` or
 `lm.model_3`. In this case, we will take model `lm.model_1`.
 
-## Saving the model
+## 6. Saving the model
 
 ``` r
 saveRDS(lm.model_1, file = ".\\lm_model.rda")
