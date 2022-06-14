@@ -2,9 +2,9 @@ Predictive model for owner-occupied Boston’s homes
 ================
 
 =========================================================================
-**Summary:** This project purpose is to build a predictive model for
-*corrected median value of owner-occupied Boston’s homes in USD
-1000’s* (`cmedv`). Linear regressions, SVD, and neural networks were
+**Summary:** This project aims to build a predictive model for
+***corrected median value of owner-occupied Boston’s homes in USD
+1000’s*** (`cmedv`). Linear regressions, SVD, and neural networks were
 used to trained candidates models, the best of each one was compared to
 select the final predictive model.
 
@@ -104,3 +104,86 @@ print(factor_variable)
 ```
 
     ## [1] "town" "chas"
+
+### 4.1 Distributions
+
+#### 4.1.1 Factors
+
+1.  `town` has 92 levels with few observations in most of them. To
+    include it, we would require almost 92 dummy variables or to know
+    deeply their patterns to split them into other classification,
+    that’s why it will be dropped.
+
+<!-- -->
+
+    ## 
+    ##               Cambridge       Boston Savin Hill                    Lynn 
+    ##                      23                      19                      18 
+    ##                  Newton     Boston South Boston          Boston Roxbury 
+    ##                      15                      13                      12 
+    ##              Somerville      Boston East Boston               Brookline 
+    ##                      12                      10                      10 
+    ##       Boston Dorchester                 Peabody               Braintree 
+    ##                       9                       9                       8 
+    ##                 Medford                  Quincy                 Waltham 
+    ##                       8                       8                       8 
+    ##               Arlington Boston Allston-Brighton         Boston Downtown 
+    ##                       7                       7                       7 
+    ##              Framingham                  Malden                   Salem 
+    ##                       7                       7                       7 
+    ##                 Belmont     Boston Forest Hills                Weymouth 
+    ##                       6                       6                       6 
+    ##         Boston Back Bay                 Everett               Lexington 
+    ##                       5                       5                       5 
+    ##                 Norwood                  Revere                  Woburn 
+    ##                       5                       5                       5 
+    ##                 Beverly      Boston Charlestown        Boston Hyde Park 
+    ##                       4                       4                       4 
+    ##         Boston Mattapan                 Chelsea                  Dedham 
+    ##                       4                       4                       4 
+    ##                 Melrose                  Milton                  Natick 
+    ##                       4                       4                       4 
+    ##                 Needham                  Sargus               Wakefield 
+    ##                       4                       4                       4 
+    ##              Winchester                Winthrop      Boston Beacon Hill 
+    ##                       4                       4                       3 
+    ##     Boston West Roxbury              Burlington                 Concord 
+    ##                       3                       3                       3 
+    ##                Randolph                 Reading                  Sharon 
+    ##                       3                       3                       3 
+    ##                 Walpole               Watertown              Wilmington 
+    ##                       3                       3                       3 
+    ##                 Ashland                 Bedford                  Canton 
+    ##                       2                       2                       2 
+    ##                 Danvers                 Hingham                Holbrook 
+    ##                       2                       2                       2 
+    ##               Lynnfield              Marblehead           North Reading 
+    ##                       2                       2                       2 
+    ##                Rockland                Stoneham              Swampscott 
+    ##                       2                       2                       2 
+    ##                 Wayland               Wellesley                  Weston 
+    ##                       2                       2                       2 
+    ##        Boston North End                Cohasset                Hamilton 
+    ##                       1                       1                       1 
+    ##                 Hanover                    Hull                 Lincoln 
+    ##                       1                       1                       1 
+    ##              Manchester              Marshfield                Medfield 
+    ##                       1                       1                       1 
+    ##               Middleton                  Millis                  Nahant 
+    ##                       1                       1                       1 
+    ##                Pembroke                Scituate                Sherborn 
+    ##                       1                       1                       1 
+    ##                 Sudbury               Topsfield                  Wenham 
+    ##                       1                       1                       1 
+    ##                Westwood                   Dover                 Duxbury 
+    ##                       1                       0                       0 
+    ##                 Norfolk                 Norwell 
+    ##                       0                       0
+
+2.  `chas` has few observations in level 1, however, it will be kept
+    because its ratio with level 0 is lower than 20.
+    ![](Figs/factors-1.png)<!-- -->
+
+#### 4.1.2 Numeric variables
+
+![](Figs/distributions-1.png)<!-- -->![](Figs/distributions-2.png)<!-- -->![](Figs/distributions-3.png)<!-- -->![](Figs/distributions-4.png)<!-- -->![](Figs/distributions-5.png)<!-- -->![](Figs/distributions-6.png)<!-- -->![](Figs/distributions-7.png)<!-- -->![](Figs/distributions-8.png)<!-- -->![](Figs/distributions-9.png)<!-- -->![](Figs/distributions-10.png)<!-- -->![](Figs/distributions-11.png)<!-- -->![](Figs/distributions-12.png)<!-- -->![](Figs/distributions-13.png)<!-- -->![](Figs/distributions-14.png)<!-- -->![](Figs/distributions-15.png)<!-- -->![](Figs/distributions-16.png)<!-- -->
