@@ -97,7 +97,7 @@ plot(testing_radial, outcome[-trainingRows])
     ## [1] "mse: 6.94"
 
 As we can see, radial kernel got a better performance, linear kernel got
-a performance similar as linear regression’s, that’s why will save the
+a performance similar as linear regression’s, that’s why we will save the
 model built based on the radial model.
 
 ## 6. Saving the model
