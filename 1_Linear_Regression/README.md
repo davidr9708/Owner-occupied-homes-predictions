@@ -3,7 +3,7 @@ Linear Regression
 
 ## Highlights
 
-===============================================================================================
+============================================================================================
 
 -   **Algorithms to use:** linear regression (`lm`); robust linear
     regression (`rlm`), and partial least square (`pls`).
@@ -11,7 +11,7 @@ Linear Regression
 -   **Session purpose:** To build a predictive model using linear
     regressions.
 
-===============================================================================================
+============================================================================================
 
 ## 4. Exploring data
 
