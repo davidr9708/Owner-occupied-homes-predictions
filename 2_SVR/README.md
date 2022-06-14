@@ -55,7 +55,9 @@ svmRTuned.radial <- train(training_data, outcome[trainingRows],
 plot(svmRTuned.radial)
 ```
 
-![](Figs_svr/training2-1.png)<!-- --> \## 5.3 Comparing performance
+![](Figs_svr/training2-1.png)<!-- --> \
+
+## 5.3 Comparing performance
 
 ``` r
 library(Metrics)
