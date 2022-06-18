@@ -8,6 +8,7 @@ Predictive model for owner-occupied Boston’s homes
 used to trained candidates models, the best of each one was compared to
 select the final predictive model. Given its performance on the training 
 testing sets, SVR model was the one selected.
+
 =========================================================================
 
 ## 1. Model’s Purpose
