@@ -6,8 +6,8 @@ Predictive model for owner-occupied Boston’s homes
 ***corrected median value of owner-occupied Boston’s homes in USD
 1000’s*** (`cmedv`). Linear regressions, SVD, and neural networks were
 used to trained candidates models, the best of each one was compared to
-select the final predictive model.
-
+select the final predictive model. Given its performance on the training 
+testing sets, SVR model was the one selected.
 =========================================================================
 
 ## 1. Model’s Purpose
